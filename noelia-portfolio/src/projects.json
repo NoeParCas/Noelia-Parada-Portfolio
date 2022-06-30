@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Pizza Pug Game",
+    "description": "A lovely pug with great hunger for Pizza. Careful! Veggies are extremely unhealthy.",
+    "technologies": "html5, JavaScript, CSS",
+    "deployed": "https://noeparcas.github.io/PIZZA-PUG-GAME/"
+  } ,
+  {
+    "name":"Pastry App",
+    "description": "A fancy app for checking juicy pastry recipes, create, update and delete your own recipes and leave some comments to support the community.",
+    "technologies": "JavasCript, Express, Mongoose, Mongo DB, Node.js, Handlebars, validation keys for users and all CRUD action on models.",
+    "deployed": "https://pastry-app.herokuapp.com/"
+  } ,
+  {
+    "name":"Laburo App",
+    "description": "If you have a lot of tasks you need to organise, this is your app! :)",
+    "technologies": "React.js, Node.js, Express for REST API, Mongo DB, Mongoose. I used fullCalendar.io package for the calendar and dates & MUI for styles",
+    "deployed": "https://laburo.netlify.app/"
+  } 
+]

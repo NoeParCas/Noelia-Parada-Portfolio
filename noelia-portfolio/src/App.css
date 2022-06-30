@@ -5,8 +5,42 @@
 }
 .lightThemeBtn{
   padding: 0;
-  background-color: Transparent;
   background-repeat:no-repeat;
   border: none;
-  font-size: 50px;
+  font-size: 40px;
+  border-radius: 150%;
+  background-color: Transparent;
+}
+
+.homepage{
+  margin-top: 100px;
+}
+.homepage h1{
+  font-size:50px;
+}
+
+.homepage h3{
+  font-size:20px;
+  margin: 80px;
+}
+.moncho{
+  box-shadow: 0 3px 20px rgba(145, 92, 182, .4);
+}
+
+.container{
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+}
+
+.aboutme{
+  margin-bottom: 30px;
+  font-size: 25px;
+  width: 700px;
+}
+
+.workexp{
+  margin-bottom: 30px;
+  font-size: 20px;
 }

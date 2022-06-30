@@ -1,32 +1,63 @@
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Link } from "react-router-dom";
+import Home from './Pages/Home';
+import ButtonAppBar from './Components/Navbar.jsx'
+import Aboutme from './Pages/Aboutme';
+import WorkExperience from './Components/WorkExperience';
+import Projects from './Pages/Projects.jsx'
+
 
 function App() {
 
   const [lightTheme, setLightTheme] = useState(true)
+  const [navColor, setNavColor] = useState("#EDF5F0")
   
   const darkStyles = {
-    backgroundColor: "black",
+    backgroundColor: "#212F3D ",
     color: "white"
   }
 
   const lightStyles = {
-    backgroundColor: "white",
+    backgroundColor: "#F4F6F6",
     color: "black"
   }
 
   const handleToggle= () => {
    setLightTheme(!lightTheme)
+   if(!lightTheme){
+     setNavColor("#D6EAF8")
+   }else{
+    setNavColor("#EDF5F0")
+   }
   }
 
   return (
     <div className="App" style={lightTheme ? lightStyles:darkStyles }>
-    <button onClick={handleToggle} className="lightThemeBtn">{lightTheme ? "🌚" : "🌝"}</button>
-      <h1>Hey you! Welcome to my Portfolio!</h1>
-      <h2>I am Noelia Parada Castro, a Junior Software Developer, dog lover and gastronomy enthusiast.</h2>
-      <h4>Feel free to look around, Moncho the Pug will guide you!</h4>
-      <Link to="#"><img display="flex" src="https://i.pinimg.com/originals/f8/97/e2/f897e2e871ed90d572f23b0539397432.gif" width="130" height="100" /></Link>
+    {/* <button onClick={handleToggle} className="lightThemeBtn">{lightTheme ? "🌚" : "🌝"}</button>
+     */}
+
+    <ButtonAppBar handleToggle={handleToggle} lightTheme={lightTheme} navColor={navColor}/>
+
+    <Routes>
+    <Route>
+    <Route path='/' element={<Home/>} />
+    </Route>
+
+    <Route>
+    <Route path='/aboutme' element={<Aboutme/>} />
+    </Route>
+
+    <Route>
+    <Route path='/projects' element={<Projects/>} />
+    </Route>
+
+    <Route>
+    <Route path='/workexperience' element={<WorkExperience/>} />
+    </Route>
+    </Routes>
+    
+      
 
     </div>
   );
